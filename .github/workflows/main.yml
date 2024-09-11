@@ -6,9 +6,9 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    container:
+      image: ubuntu:latest
+    runs-on: eks_runner
     steps:
       - uses: actions/checkout@v4
       - name: Build with Maven
